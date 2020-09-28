@@ -22,4 +22,4 @@ after_success:
 before_deploy:
 
 deploy:
-  - echo 'WIP'
+  - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
