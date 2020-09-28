@@ -25,4 +25,4 @@ before_deploy:
   - docker push $DOCKER_LOGIN/monolithic-shop:latest
 
 deploy:
-  - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin"
+  - bash -c "echo \"${DOCKER_PASSWORD}\" | docker login --username \"${DOCKER_LOGIN}\" --password-stdin chmod +x ./script/deploy.sh"
